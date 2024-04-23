@@ -468,6 +468,7 @@ def get_report_schema(client, report_name):
 
     report_columns = map(lambda x: x.name, report_columns_type.rawchildren[0].rawchildren)
 
+
     properties = {}
     for column in report_columns:
         # Prepare json `type` for schema of streams e.g. "type": ["null","integer"]
@@ -482,6 +483,9 @@ def get_report_schema(client, report_name):
             col_schema = {'type': ['null', _type]}
 
         properties[column] = col_schema
+        if column == 'Goal':
+            properties['GoalId'] = {'type': ['null', 'integer'] }
+
 
     properties['_sdc_report_datetime'] = {
         'type': 'string',
