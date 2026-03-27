@@ -15,7 +15,7 @@ setup(
         # Seems that suds-community is now the reference for 13.0.11.1 so we can install it now with the removal of use_2to3
         # https://github.com/BingAds/BingAds-Python-SDK/pull/192
         'bingads==13.0.11.1',
-        'requests==2.31.0',
+        'requests==2.33.0',
         'singer-python==6.0.0',
         'stringcase==1.2.0',
         'backoff==2.2.1',
